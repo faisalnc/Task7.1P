@@ -8,12 +8,12 @@ import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 
 export default function NewPostPage() {
-  const { user } = useAuth(); // 🔐 Get the user from context
+  const { user } = useAuth(); 
   const router = useRouter();
 
   useEffect(() => {
     if (!user) {
-      router.replace('/login'); // 🔐 Redirect if not logged in
+      router.replace('/login'); 
     }
   }, [user]);
 
